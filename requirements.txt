@@ -1,0 +1,37 @@
+# ──────────────────────────────────────────────
+# Photo2Model — Backend Python Dependencies
+# ──────────────────────────────────────────────
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# AI / ML
+torch>=2.1.0          # Install CUDA build from https://pytorch.org if you have GPU
+torchvision>=0.16.0
+huggingface-hub>=0.23.0
+
+# Image processing
+Pillow>=10.3.0
+numpy>=1.26.0
+
+# 3D mesh processing & export
+trimesh>=4.3.0
+pyglet>=2.0.0         # trimesh viewer (optional)
+pyopengl>=3.1.7       # trimesh viewer (optional)
+
+# Background removal (optional, improves 3D quality significantly)
+rembg>=2.0.57         # Run: pip install rembg[gpu] for CUDA-accelerated background removal
+
+# System monitoring
+psutil>=5.9.8
+
+# ──────────────────────────────────────────────
+# TripoSR (must be cloned manually – see README)
+# ──────────────────────────────────────────────
+# git clone https://github.com/VAST-AI-Research/TripoSR
+# cd TripoSR && pip install -e .
+#
+# OR install directly:
+# pip install git+https://github.com/VAST-AI-Research/TripoSR.git
